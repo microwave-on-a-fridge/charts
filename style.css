@@ -182,19 +182,6 @@ a:active {
   width: 40%;
   margin: auto;
 }
-/*.row {
-  display: flex;
-}
-
-.column4 {
-  flex: 25%;
-  padding: 5px;
-}
-
-.column3 {
-  flex: 33.33%;
-  padding: 5px;
-}*/
 
 .row {
   width: 100%;
@@ -208,6 +195,11 @@ a:active {
 .right {
   float: right;
   margin-right: 20%;
+}
+
+.middle {
+  float: right;
+  margin-right: 37%;
 }
 
 .grow {
