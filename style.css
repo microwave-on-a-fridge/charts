@@ -197,11 +197,6 @@ a:active {
   margin-right: 20%;
 }
 
-.middle {
-  float: right;
-  margin-right: 37%;
-}
-
 .grow {
   transition: transform 0.2s;
   margin: 0 auto;
