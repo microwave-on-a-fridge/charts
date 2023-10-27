@@ -6,156 +6,27 @@ body {
   color: #ffffff;
 }
 a:link {
-  color: #d88fff;
+  color: #efb0ff;
   background-color: transparent;
   text-decoration: none;
 }
 a:visited {
-  color: #d88fff;
+  color: #efb0ff;
   background-color: transparent;
   text-decoration: none;
 }
 a:hover {
-  color: #d88fff;
+  color: #efb0ff;
   background-color: transparent;
   text-decoration: underline;
 }
 a:active {
-  color: #d88fff;
+  color: #efb0ff;
   background-color: transparent;
   text-decoration: underline;
 }
-/* ANIMATION STUFF */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
 
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  animation-name: fadeIn;
-}
-
-@keyframes fadeInBottomLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 100%, 0);
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInBottomLeft {
-  animation-name: fadeInBottomLeft;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInDown {
-  animation-name: fadeInDown;
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInLeft {
-  animation-name: fadeInLeft;
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInRight {
-  animation-name: fadeInRight;
-}
-
-@keyframes fadeInBottomRight {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 100%, 0);
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInBottomRight {
-  animation-name: fadeInBottomRight;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInUp {
-  animation-name: fadeInUp;
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.rotation {
-  animation-name: rotation;
-}
-
-/*END OF ANIMATION STUFF */
-
-.border {
+.section {
   position: relative;
   border-radius: 50px;
   background: #ffffff;
@@ -172,16 +43,6 @@ a:active {
   text-decoration: none;
   margin-bottom: 30px;
 }
-.download {
-  border-radius: 10px;
-  background: #000000;
-  color: #ffffff;
-  font-size: 30px;
-  text-decoration: none;
-  padding: 15px;
-  width: 40%;
-  margin: auto;
-}
 
 .row {
   width: 100%;
@@ -189,12 +50,12 @@ a:active {
 
 .left {
   float: left;
-  margin-left: 20%;
+  margin-left: 22.5%;
 }
 
 .right {
   float: right;
-  margin-right: 20%;
+  margin-right: 22.5%;
 }
 
 .grow {
@@ -212,4 +73,164 @@ a:active {
   border-radius: 10px;
   width: 250px;
   height: 250px;
+}
+
+.artist {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+}
+
+.section-button {
+  border-radius: 10px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 15px;
+  width: 40%;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.difftext {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+.diffimage {
+  margin-right: 50%;
+  height: 43%;
+}
+
+/* modal*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/*img btn*/
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.container:hover img {
+  filter: brightness(50%);
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  font-family: Source Code Pro;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  visibility: hidden;
+}
+
+.container:hover .btn {
+  visibility: visible;
+}
+
+.container .btn:hover {
+  background-color: black;
 }
